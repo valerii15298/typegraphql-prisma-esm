@@ -6,8 +6,8 @@ import { Prisma } from "@prisma/client";
 import { resolvers, User } from "@generated/type-graphql";
 import { JSONResolver } from "graphql-scalars";
 
-import * as url from "url";
-const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
+// import * as url from "url";
+// const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
 
 @Resolver((_of) => User)
 class CustomResolver {

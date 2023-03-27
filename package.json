@@ -1,6 +1,5 @@
 {
   "private": true,
-  "type": "module",
   "scripts": {
     "start": "ts-node --esm --transpile-only ./index.ts",
     "generate": "prisma generate && echo {} > ./node_modules/@generated/type-graphql/package.json",
