@@ -4,9 +4,12 @@ import path from "path";
 import { Prisma } from "@prisma/client";
 
 import { resolvers, User } from "@generated/type-graphql";
-import { JSONResolver } from "graphql-scalars";
 
 import * as url from "url";
+
+import Module from "node:module";
+const require = Module.createRequire(import.meta.url);
+const { JSONResolver } = require("graphql-scalars");
 const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
 
 @Resolver((_of) => User)
